@@ -1,0 +1,6 @@
+<ng-container *ngIf="products">
+<div class="row">
+    <app-product [product]="product" *ngFor="let product of products"></app-product>
+    <app-cart-widget [item]="item" class="widgetCard"></app-cart-widget>
+</div>
+</ng-container>
