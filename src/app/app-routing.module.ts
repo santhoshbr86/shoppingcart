@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path:'login', loadChildren:() => import('./login/login.module').then(m => m.LoginModule)},
   { path:'products', loadChildren:() => import('./products/products.module').then(m => m.ProductsModule)},
-  { path:'cart/:id', loadChildren:() => import('./products/products.module').then(m => m.ProductsModule)},
+  // { path:'cart/:id', loadChildren:() => import('./products/products.module').then(m => m.ProductsModule)},
    { path: '', redirectTo: '/login', pathMatch: 'full'},
 ];
 

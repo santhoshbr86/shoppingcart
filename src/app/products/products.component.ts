@@ -9,10 +9,9 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductsComponent implements OnInit {
   public products:Product[];
+  searchText='';
   constructor(private productService:ProductService) { }
-
   ngOnInit(): void {
     this.products = this.productService.findAll();
   }
-
 }

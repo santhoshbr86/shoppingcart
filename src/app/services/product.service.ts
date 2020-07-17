@@ -39,4 +39,9 @@ export class ProductService {
     getData():Observable<any>{
         return this.subject.asObservable();
     }
+    getcartItems(items){
+        return items.map((item) =>{
+            return this.products.find(product => product.id == item);
+        }); 
+    }
 }

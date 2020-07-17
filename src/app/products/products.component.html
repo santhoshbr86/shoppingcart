@@ -1,6 +1,8 @@
 <ng-container *ngIf="products">
+<header class="row searchBox">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search for items" [(ngModel)]="term" aria-label="Search">
+</header>
 <div class="row">
-    <app-product [product]="product" *ngFor="let product of products"></app-product>
-    <app-cart-widget [item]="item" class="widgetCard"></app-cart-widget>
+    <app-product [product]="product" *ngFor="let product of products | datafilter:searchText"></app-product>
 </div>
 </ng-container>
